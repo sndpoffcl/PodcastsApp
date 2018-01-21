@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Podcasts App</string>
+    <string name="languages_category">Languages</string>
+    <string name="sciences_category">Sciences</string>
+    <string name="space_category">Space</string>
+    <string name="Finance_category">Finance</string>
+    <string name="history_category">History</string>
+    <string name="programming_category">Programming</string>
+    <string name="policy_category">Policy</string>
+    <string name="sport_category">Sport</string>
+</resources>

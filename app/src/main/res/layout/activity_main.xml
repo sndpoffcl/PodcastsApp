@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:orientation="horizontal"
+        tools:context="com.example.anrdoid.podcastsapp.MainActivity">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/language"
+                style="@style/CategoryStyle"
+                android:background="@drawable/languages"
+                android:text="@string/languages_category" />
+
+            <TextView
+                android:id="@+id/finance"
+                style="@style/CategoryStyle"
+                android:background="@drawable/finance"
+                android:text="@string/Finance_category" />
+
+            <TextView
+                android:id="@+id/science"
+                style="@style/CategoryStyle"
+                android:background="@drawable/sciences"
+                android:text="@string/sciences_category" />
+
+            <TextView
+                android:id="@+id/sport"
+                style="@style/CategoryStyle"
+                android:background="@drawable/sport"
+                android:text="@string/sport_category" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/programming"
+                style="@style/CategoryStyle"
+                android:background="@drawable/programming"
+                android:text="@string/programming_category" />
+
+            <TextView
+                android:id="@+id/history"
+                style="@style/CategoryStyle"
+                android:background="@drawable/history"
+                android:text="@string/history_category" />
+
+            <TextView
+                android:id="@+id/space"
+                style="@style/CategoryStyle"
+                android:background="@drawable/space"
+                android:text="@string/space_category" />
+
+            <TextView
+                android:id="@+id/policy"
+                style="@style/CategoryStyle"
+                android:background="@drawable/policy"
+                android:text="@string/policy_category" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
