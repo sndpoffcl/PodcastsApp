@@ -1,14 +1,12 @@
 package com.example.anrdoid.podcastapp;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.ImageView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 /**
  * Created by Labtop on 21/01/18.
@@ -38,5 +36,25 @@ public class PlayPodcastActivity extends AppCompatActivity {
 
         modifypodcast_Date_textView = modifypodcast_Date_textView + " " + PDate;
         podcastDatetextView.setText(modifypodcast_Date_textView);
+
+        Button homeButton = (Button) findViewById(R.id.home_button_view);
+        //set a clicklistener on that view
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent languageIntent = new Intent(PlayPodcastActivity.this, MainActivity.class);
+                startActivity(languageIntent);
+            }
+        });
+
+        Button backButton = (Button) findViewById(R.id.back_button_view);
+        //set a clicklistener on that view
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
+
 }

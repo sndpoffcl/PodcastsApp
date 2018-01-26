@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,22 +26,32 @@ public class FinanceActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listview);
 
-        final ArrayList<Podcast> PodcasttList = new ArrayList<>();
+        final ArrayList<Podcast> podcastList = new ArrayList<>();
 
         // add demo auto data faster by loop
         for (int i = 10; i > 0; i--) {
 
-            PodcasttList.add(new Podcast("Finance Episode " + i, "21-1-2018", R.drawable.icon_podcast));
+            podcastList.add(new Podcast("Finance Episode " + i, "21-1-2018", R.drawable.icon_podcast));
         }
-        listView.setAdapter(new PodcastAdpater(this, PodcasttList));
+        listView.setAdapter(new PodcastAdpater(this, podcastList));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(FinanceActivity.this, PodcasttList.get(position).getPodcastName(), Toast.LENGTH_LONG).show();
+                Toast.makeText(FinanceActivity.this, podcastList.get(position).getPodcastName(), Toast.LENGTH_LONG).show();
                 Intent languageIntent = new Intent(FinanceActivity.this, PlayPodcastActivity.class);
-                languageIntent.putExtra("PodcastName", PodcasttList.get(position).getPodcastName());
-                languageIntent.putExtra("PodcastDate", PodcasttList.get(position).getPodcastDate());
+                languageIntent.putExtra("PodcastName", podcastList.get(position).getPodcastName());
+                languageIntent.putExtra("PodcastDate", podcastList.get(position).getPodcastDate());
+                startActivity(languageIntent);
+            }
+        });
+
+        Button homeButton = (Button) findViewById(R.id.home_button_view);
+        //set a clicklistener on that view
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent languageIntent = new Intent(FinanceActivity.this, MainActivity.class);
                 startActivity(languageIntent);
             }
         });

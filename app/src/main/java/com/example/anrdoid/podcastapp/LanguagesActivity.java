@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -41,6 +42,16 @@ public class LanguagesActivity extends AppCompatActivity {
                 Intent languageIntent = new Intent(LanguagesActivity.this, PlayPodcastActivity.class);
                 languageIntent.putExtra("PodcastName", PodcasttList.get(position).getPodcastName());
                 languageIntent.putExtra("PodcastDate", PodcasttList.get(position).getPodcastDate());
+                startActivity(languageIntent);
+            }
+        });
+
+        Button homeButton = (Button) findViewById(R.id.home_button_view);
+        //set a clicklistener on that view
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent languageIntent = new Intent(LanguagesActivity.this, MainActivity.class);
                 startActivity(languageIntent);
             }
         });

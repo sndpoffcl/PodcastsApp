@@ -24,13 +24,25 @@
         android:text="Date Of Publish:"
         android:textColor="@color/colorAccent" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/play_icon" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/back_button_view"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/back_button" />
+
+        <Button
+            android:id="@+id/home_button_view"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/home_button" />
+
+    </LinearLayout>
 </LinearLayout>

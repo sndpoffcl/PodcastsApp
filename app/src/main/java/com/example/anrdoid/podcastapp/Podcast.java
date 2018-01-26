@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class Podcast extends ArrayList<Podcast> {
 
-    String pName;
-    String pDate;
-    int pImageId ;
+    private String pName;
+    private String pDate;
+    private int pImageId;
 
-    public Podcast(String name, String date , int imageId) {
+    public Podcast(String name, String date, int imageId) {
         this.pName = name;
         this.pDate = date;
         this.pImageId = imageId;
@@ -34,8 +34,12 @@ public class Podcast extends ArrayList<Podcast> {
         this.pName = name;
     }
 
-    public void setPodcastDate(String date) { this.pDate = date; }
+    public void setPodcastDate(String date) {
+        this.pDate = date;
+    }
 
-    public void setPodcastImageId(int imageId) { this.pImageId = imageId; }
+    public void setPodcastImageId(int imageId) {
+        this.pImageId = imageId;
+    }
 
 }
