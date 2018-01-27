@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by Labtop on 20/01/18.
  */
 
-public class Podcast extends ArrayList<Podcast> {
+public class Podcast {
 
     private String pName;
     private String pDate;
