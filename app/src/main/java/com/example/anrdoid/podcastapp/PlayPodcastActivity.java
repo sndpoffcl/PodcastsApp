@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Created by Labtop on 21/01/18.
+ * Created by SandeepSinha on 25/11/18.
  */
 
 public class PlayPodcastActivity extends AppCompatActivity {
